@@ -1,19 +1,23 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+//    id 'com.google.protobuf' version "0.8.18"
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
 
 repositories {
+    google()
     mavenCentral()
 }
 
 dependencies {
+    implementation "com.google.protobuf:protobuf-java:3.20.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+//    implementation 'com.google.protobuf:protobuf-gradle-plugin:0.8.18'
 }
 
 test {
